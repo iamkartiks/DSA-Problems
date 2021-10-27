@@ -1,0 +1,299 @@
+Types Of DBMS:-
+
+    Centralised DB :
+        Store data in centralised repository and let user access it via authentication securely.
+
+        Advantages:
+            decreased risk of data management
+            data consistency
+            less costly
+
+        Disad. :
+            increase response time because central DB is huge
+            on some errors entire data will be loss
+
+
+    Distributed DB:
+        data distributed among different DB of any org. and are connected each other with link to let users access data easily
+
+        Homogeneous: work on same OS
+        Heterogeneous: work on different OS
+
+        Adv.:
+            some error will not end up with whole data loss
+            Modular development possible and can expand by using new computers as nodes as well.
+
+    Relational DB:
+        Store data in rows and columns and forms relation between each resulting in a table.
+        RDBMS uses SQL for creation, manipulation and maintainance.
+
+        ACID ---
+                Atomicity :- either success or failure
+                Consistency :- value before and after any operation should be preserved
+                Isolation :- one transaction should not be visible to others
+                Durability :- if changes occured it should be permanent
+
+
+    Non Relation DBMS:
+        Store Data in other forms rather than being in a tabular form.
+
+        a ) Key Valued Storage :- store every time as a key holding its value.
+        b ) Document Oriented :- JSON-like format , it helps programmers to store data in the same format as the application code.
+        c ) Graph Database :- To store vast amount of data in graph format, usually form social networks.
+        d ) Wide Column Store :- similar to RDBMS , data stored in large coulmns rather than in rows.
+
+
+        Adv. :- 
+            good productivity during development
+            better for handling large dataset
+            high scalability
+            faster accessibility using key values
+
+
+
+    Cloud DB:-
+        Data is stored in a virtual environment and executes over cloud platform and provides various cloud services.
+
+            AWS, Azure
+
+    
+    Object Oriented Platform :- 
+        data stored in the form of objects based data model similar to OOP Language
+
+
+    Heirarichal DB:-
+        data stored in parent-children realtionship nodes, organized in tree like structure.
+    
+    Network DB:-
+        follows the network liked structure , data stored in nodes and interconnected with other via links
+        it can have multiple children and parents leads to graph like structure.
+    
+    Personal DB:-
+        Collecting data for a personal DB , it's useful for single user
+
+        Adv, :- 
+            easy to manage
+            less in size
+    
+    Operational DB:- 
+        creates and updates in real time, basically designed for managing data operations in businesses.
+
+        for eg. management of purchase orders of a local shop
+
+    Enterpruise DB :-
+        It is use for managing massive amoiunt of data for an organization to increase effieciency and is for simultaneous users
+
+        Adv. :- 
+            multi process
+            allows execution parallel queries    
+
+Data Integrity in RDBMS:-
+
+    Entity Int. :- 
+            there should be no duplicate rows
+    Domain Int. :-
+            restriction of type, format and range of values
+    Refrential Int. :-
+            rows used by others records can't be deleted
+    User defined Int. :-
+            specific rules defined by users.
+
+DBMS vs File System :-
+ 
+    1) user not required to write procedures        1) user required to write procedures
+    2) gives an abstract view                       2) gives detailed representation
+    3) provides crash recovery mechanism            3) no such mechanism
+    4) provides vast ways to store and retrieve data 4) isn't able to effieciently store and retrival
+    5) provides protection                            5) no such protection mechanism
+    6) concurrent access possible                    6) errors during concurrent access
+
+DBMS Architecture :-
+
+    1 tier Architecture 
+        user work directly on the DB
+    
+    2 tier Architecure 
+        client-server realtionship
+        application on client side directly interacts with Database
+        server side is responsible for queries processing and management
+        to communicate with DBMS client side established connection with server
+    
+    3 tier Architecture
+        it has one more layer which is server side application
+        client side application interacts with server side application
+        3 tier architecture is used in large web application
+
+Three Schema Architecture :-
+    ANSI/SPARC architecture
+    use for specific database System
+    use to separate user application and physical database
+    contains three level
+            - External Schema         
+                                [ External->Conceptual Mapping ]
+            - Conceptual Schema
+                                [Conceptual->Internal Mapping]
+            - Internal Schema
+                            |
+                         Database
+    Mapping is use to transform request between two layers of schema
+    it takes time so it is not good for small DBMS
+    
+
+    Internal Level :-
+            containes internal schema which has the phyical storage structure of  database
+            physical schema
+            it use to define how data will be stored
+            it is use to describe complex low level structure
+    
+    Conceptual Level :- 
+            describe structure of database on logical level
+            describe what kind of data is going to be stored in DB and what will be the relationships
+            interntals details such as impletations and all are hidden
+            programmsers and administrators works at this level
+    
+    External Level :-
+            subschema is use to define different aspects of database
+            external schema is aka view schema
+            it shows only database which is of specific interests and hide the remaining others
+            it describes the end user interaction with database
+            
+Data Models :- 
+    It is modelling of data description, semantics, and consistency constraints of data.
+    It provides tools to describe DB design at each levels.
+
+    There are 4 types of Data Model:-
+
+        1) Relational Data Model:
+            model designs the data in form of rows and columns where table act as relations.
+        
+        2) Entity Relationship Data Model:
+            ER model is logical representation of data as objects and within relationships.
+            obejcts k/a entitites and relationships as association on those entitites.
+        
+        3) Objects based Data Model:
+            It is an extension of ER models with supports of encapuslation, functions and object identities.
+        
+        4) Semistructured Data Model:
+            it allows data specifivations where the data items of same type might have different attributes.
+            XML ( extensible markup language ) is used for  represting the Semistructured data.
+
+Instance and Schema 
+    Data stores in DB at certain point is called instance of that timw.
+    overall design of DB is called Schema.
+
+    Shcmea contains schema objects such as table, columns, keys, data types....
+
+Data Independance:-
+    It can be explained using three schema architecture.
+    characterstics of modifying schema data at certain level without altering it on higher levels.
+
+    Logical Independance:-
+        change conceptual schema without altering external schema
+        any change at conceptual level will not affect user view at extenal level
+        it is use to seprate conceptual and external levels.
+    
+    Physical Independance:-
+        change internal schema without affecting conceptual schema
+        use to separate internal levels from conceptual level
+        it occurs at physical logical level
+
+
+        EXTERNAL Level
+            |               logical data indepenacve
+        LOGICAL Level
+            |               physical data independance
+        PHYSICAL Level
+
+DB Languages:-
+    it has speific and appropriate languages for queries and others operations
+
+    DDL:-
+        it is use to define a structure
+        create schema, database,table..
+        create skeleton of DB
+        use to store the information like number of tbales, rows, columns, names and other constraints.
+
+        Tasks:- Create, Alter, Drop, Truncate, Rename
+    
+
+    DML:-
+        it is use to access and manipulate our database
+        handles user requests.
+
+        Tasks:- Select, Insert, Update, Delete, Merge, Call
+    
+
+    DCL:-
+        use to retrieve the stored data
+        DCL execution is transactional
+
+        Tasks: Grant- user access privilage to DB
+               Revoke- take back permission from the user
+
+               operations wiht revoke authorization
+                Connect, Insert, Usage, Execute
+    
+    TCL:-
+        it is used to run the changes made by DML
+
+        COMMIT - save transaction in DB
+        ROLLBACK - use to restore database to original (or the last commit )
+
+
+ER Model :-
+    ER model is a high level model,this model is used to define the data elements and relationship for system.
+    It develops conceptual design of DB.
+    portrayed as entity-relationship diagram.
+
+    ER Model
+
+    Entity ( any object or class ...)
+
+        - Weak Entity:- entity that depends on other entities and doesn't have any attributes of their own.
+    
+    Attribute ( use to describe property of a student )
+
+        - Key Attribute ( represents main characterstics of entity, primary key, represent by ellipse with an underline )
+        - Composite Attr ( composed of many other attrs , represented by ellipse )
+        - Multivalued Attr ( it can have multiple values )
+        - Derived Attr ( can be derived from other attrs, represented by dashed ellipse )
+
+    Relationship ( it is use to describe relation between two entities )
+
+        - One-One   ( one entity -> one entity )
+        - Many-One  ( many entities -> one entity )
+        - Many-Many ( many entities -> many entities )
+        - One-Many  ( one entity -> many entities )
+
+Keys :-
+    use to identify entities and establish realtions between them as well.
+
+    Primary Key :- use to identify entity uniquely, most suitable key is selected as primary key
+                   primary key selection is based upon requiremnets and users.
+    
+    Candidate Key :- attr or set of attr use to define an entity
+                     all other keys except primary keys are called candidate keys
+    
+    Super Key :- set of attr which can define entity
+                 Super key is super set of candidate keys
+    
+    Foreign Key :- column of table which is use to point primary keys of other tbales
+                   
+Generalization :- It is bottom up approach of combining two more different or same 
+                  levefl entitties to form a evenmn higher level entity.
+
+                  in general subclass are combined togehter to form a super class.
+
+Specializaton :- It is topbottom approach of splitting higher level entity into further lower level entities.
+                 It is use to define characterstics of entity subset which shares some distinguish attributes.
+
+                 Super class -> Subclass and their attributes ----> Relation between entitites.
+
+Aggregation :- Relation between two entities treated as a single one.
+                # furhter imfo will be added
+
+Reduction of ER Diagram into Table :- 
+        Conversion of ER diagram into table using it convert everything into specific groups they belong to
+
+
+

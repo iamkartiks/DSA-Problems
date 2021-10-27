@@ -1,9 +1,4 @@
-# RestAPI
-# Machine Learning
-# Django
-# Python/C
-# Data Structures & Algorithms
-# GRE+TOEFL
-# DBMS + SQL
-# COMPUTER NETWORKS
+#python 
 
+Input 2D List in python :
+''' a = [[int(input()) for _ in range(4)] for _ in range(3)] '''
