@@ -1,3 +1,8 @@
+
+'''
+strassen algo is used for matrix multiplication
+'''
+
 import numpy as np
 
 def split(matrix):
