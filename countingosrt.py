@@ -1,5 +1,5 @@
 def counting_sort(A):
-    range_of_ele = int(max(A))-int(min(A))+1
+    range_of_ele = int(max(A))-int(min(A))+1 
     c = [0 for _ in range(range_of_ele)]
     b = [0 for _ in range(len(A))]
 
