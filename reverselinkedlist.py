@@ -25,7 +25,7 @@ def reverse():
 
     while current !=None:
         link = current.link
-        current.next = prev
+        current.link = prev
         prev = current
         current = link
     a = prev
