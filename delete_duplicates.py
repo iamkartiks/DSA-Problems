@@ -1,4 +1,14 @@
+'''
+Returning only unique elements from the array
+The Approach we have taken here is we created a empty list and then appended single iteration of element
+from the input in this unique list.
+'''
+
 def deleteDuplicates(arr):
+    '''
+    Arguments : Input Array
+    Returns : Unique Elements Array
+    '''
     unique = []
     for i in arr:
         if i not in unique:

@@ -1,3 +1,7 @@
+'''
+Python program for the heap sort
+'''
+
 def heapify(A,n,i):
     largest=i
     l=2*i+1
