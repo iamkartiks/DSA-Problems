@@ -1,3 +1,8 @@
+fn method(input:i32) -> i32{
+    input * input
+}
+
 fn main() {
-    println!("Hello, world!");
+    let res = method(4);
+    println!("val is:{}",res);
 }
