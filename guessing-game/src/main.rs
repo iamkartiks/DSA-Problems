@@ -1,6 +1,6 @@
-use std::io;
-use std::cmp::Ordering;
-use rand::Rng;
+// use std::io;
+// use std::cmp::Ordering;
+// use rand::Rng;
 
 fn main() {
 
@@ -22,4 +22,5 @@ fn main() {
         Ordering::Greater => println!("Too big!"),
         Ordering::Equal => println!("You win!"),
     }
+
 }
