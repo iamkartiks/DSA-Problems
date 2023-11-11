@@ -1,12 +1,10 @@
+struct Color(i32, i32, i32);
+struct Point(i32, i32, i32);
+
 fn main() {
-    let mut s = String::from("hello");
+    let black = Color(0, 0, 0);
+    let origin = Point(0, 0, 0);
 
-    change(&mut s);
+    println!("Color: ({})", black.0);
+    println!("Origin: ({})", origin.0);
 }
-
-fn change(some_string: &mut String) {
-    some_string.push_str(", world");
-
-    println!("{}", some_string);
-}
-
