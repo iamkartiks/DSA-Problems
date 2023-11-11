@@ -1,8 +1,18 @@
-fn method(input:i32) -> i32{
-    input * input
+use std::io;
+fn main() {
+    let mut input = String::new();
+    io::stdin().read_line(&mut input).expect("Failed to read line");
+    let num: i32 =  input.trim()
+                    .parse()
+                    .expect("Please enter a valid integer");
+    println!("{}", num);
+
+    dummy(&num);
 }
 
-fn main() {
-    let res = method(4);
-    println!("val is:{}",res);
+
+fn dummy(x:&i32){
+    println!("{}",x^2);
 }
+
+// toilet age suggest crack bid produce flight observe capable nuclear speed elevator
